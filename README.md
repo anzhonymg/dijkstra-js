@@ -22,5 +22,5 @@ dijkstra.addNode("f", {"d":5, "d":2, "h":3})
 dijkstra.addNode("g", {"b":5, "e":2})
 dijkstra.addNode("h", {"f":3, "e":1})
 
-console.log(d.path("a", "h")) // ["a", "c", "d", "f", "h"]
+console.log(dijkstra.path("a", "h")) // ["a", "c", "d", "f", "h"]
 ```
