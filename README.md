@@ -1,5 +1,4 @@
 # dijkstra.js
-====
 #### A class that implements the Dijkstra's algorithm to find the low-cost path from a given weighted graph
 
 #### Get Started
