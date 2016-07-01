@@ -5,8 +5,8 @@
 
 1. Include `dijsktra.js` in the head of your document.
 2. Create an new instance: `var dijkstra = new Dijkstra()`
-3. Add nodes: `dijkstra.addNode([[node name]], {[[node name]]:[[weight]], [[node name]]:[[weight]], ... })`
-4. Calculate the low-cost path: `dijstra.path([[node name]], [[node name]])`
+3. Add nodes: `dijkstra.addNode([node name], {[node name]:[weight], [node name]:[weight], ... })`
+4. Calculate the low-cost path: `dijstra.path([node name], [node name])`
 
 #### Example
 
