@@ -8,7 +8,7 @@
 3. Add nodes: `dijkstra.addNode([node name], {[node name]:[weight], [node name]:[weight], ... })`
 4. Calculate the low-cost path: `dijstra.path([node name], [node name])`
 
-#### Example
+#### Example 1
 
 ```javascript
 var dijkstra = new Dijkstra()
@@ -21,6 +21,24 @@ dijkstra.addNode("e", {"g":2, "d":4, "h":1})
 dijkstra.addNode("f", {"d":5, "d":2, "h":3})
 dijkstra.addNode("g", {"b":5, "e":2})
 dijkstra.addNode("h", {"f":3, "e":1})
+
+console.log(dijkstra.path("a", "h")) // ["a", "c", "d", "f", "h"]
+```
+
+#### Example 2
+
+```javascript
+var d = new Dijsktra(
+{
+	"a": {"b":3, "c":1},
+	"b": {"a":3, "d":1, "g":5},
+	"c": {"a":1, "d":2, "f":5 },
+	"d": {"c":2, "f":2, "b":1, "e":4},
+	"e": {"g":2, "d":4, "h":1},
+	"f": {"d":5, "d":2, "h":3},
+	"g": {"b":5, "e":2},
+	"h": {"f":3, "e":1},
+})
 
 console.log(dijkstra.path("a", "h")) // ["a", "c", "d", "f", "h"]
 ```
