@@ -79,22 +79,3 @@ class Dijsktra
 		this._processTags() // analize tags again until finish the process
 	}
 }
-
-/*
-
-// how to use
-
-var d = new Dijsktra(
-{
-	"a": {"b":3, "c":1 },
-	"b": {"a":3, "d":1, "g":5 },
-	"c": {"a":1, "d":2, "f":5 },
-	"d": {"c":2, "f":2, "b":1, "e":4 },
-	"e": {"g":2, "d":4, "h":1 },
-	"f": {"d":5, "d":2, "h":3 },
-	"g": {"b":5, "e":2 },
-	"h": {"f":3, "e":1 },
-})
-
-console.log(d.path("a", "h")) // ["a", "c", "d", "f", "h"]
-*/
