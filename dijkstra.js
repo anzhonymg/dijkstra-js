@@ -1,7 +1,7 @@
 /**
  *
- * Dijkstra.js - Pathfinding class in es6
- * A class that resolves the problem to find the low-cost path from a given weighted graph
+ * dijkstra.js - Pathfinding class in es6
+ * An implementation of the Dijkstra's algorithm to find the low-cost path from a given weighted graph.
  * @author Jerson La Torre (https://github.com/jerson-latorre) - 2016
  *
  */
