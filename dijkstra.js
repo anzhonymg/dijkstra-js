@@ -1,7 +1,7 @@
 /**
  *
- * dijkstra.js - Pathfinding class in es6
- * An implementation of the Dijkstra's algorithm to find the low-cost path from a given weighted graph.
+ * dijkstra.js
+ * An implementation of the Dijkstra's algorithm in es6 to find the low-cost path from a given weighted graph.
  * @author Jerson La Torre (https://github.com/jerson-latorre) - 2016
  *
  */
@@ -22,8 +22,8 @@ class Dijsktra
 
 	path(node1, node2)
 	{
-		this.tags[node1] = {"w":0, "prev":null} // init first tag
-		this._processTags() // process tag list
+		this.tags[node1] = {"w":0, "prev":null} // the first tag
+		this._processTags() // process tags
 
 		var prev = node2
 		var path = [prev]
@@ -39,7 +39,8 @@ class Dijsktra
 
 	_processTags()
 	{
-		if (this.blackList.length == Object.keys(this.nodes).length) return // returns if there is no more nodes to tag
+		// returns if there is no more nodes to process
+		if (this.blackList.length == Object.keys(this.nodes).length) return
 		
 		// find the tag with the less weight
 		let smaller = 1000000
@@ -53,7 +54,7 @@ class Dijsktra
 			}
 		})
 
-		// tag the children nodes of the found tag
+		// tag the childrens of the found tag
 		Object.keys(this.nodes[smallerTag]).forEach(keyNode => 
 		{
 			if(!(this.blackList.includes(keyNode))) // if the child node has been tagged, continue with the next node
@@ -75,7 +76,7 @@ class Dijsktra
 			}
 		})
 
-		this.blackList.push(smallerTag) // mark the current node as tagged
-		this._processTags() // analize tags again until finish the process
+		this.blackList.push(smallerTag) // check the current node as tagged
+		this._processTags() // process tags again until finishing the process
 	}
 }
